@@ -19,7 +19,7 @@ namespace AnimalShelterApi.Controllers.v1
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Animal>>> Get(string name, string species, string description, int age)
+    public async Task<ActionResult<IEnumerable<Animal>>> Get(string name, string species, string description)
     {
       IQueryable<Animal> query = _db.Animals.AsQueryable();
 
