@@ -63,7 +63,7 @@ namespace AnimalShelterApi.Controllers.v2
       return CreatedAtAction(nameof(GetAnimal), new { id = animal.AnimalId }, animal);
     }
 
-    //PUT: api/Messages/5
+    
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Animal animal)
     {
