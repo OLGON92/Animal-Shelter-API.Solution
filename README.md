@@ -50,7 +50,7 @@ _This is an API that works as a way to create profiles for animals in an imagina
 * _Here is a link where you can download for your Mac, Windows, or Linux based machince: [link](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)_
 * _Look in your downloads and open the file_
 * _Follow the installation intructions_
-* _To confirm the the installation was a success: on your command line in your terminal type "dotnet --version"_
+* _To confirm the the installation was a success: on your command line in your terminal type `dotnet --version`_
 
 #### Install dotnet script
 * _Enter the command ``dotnet tool install -g dotnet-script`` in Terminal for macOS or PowerShell for Windows._
