@@ -56,10 +56,10 @@ _This is an API that works as a way to create profiles for animals in an imagina
 * _Enter the command ``dotnet tool install -g dotnet-script`` in Terminal for macOS or PowerShell for Windows._
 
 #### Install MySQL Workbench
-* _Then you will need to install MySQL. Follow the instructions in here[link](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql) to do so._
+* _Then you will need to install MySQL. Follow the instructions in this [link](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql) to do so._
 
 #### Install Postman
-* _(Optional) [Download and install Postman](https://www.postman.com/downloads/)._
+* _Here's a link to [Download and install Postman](https://www.postman.com/downloads/)._
 
 #### Code Editor
 You will need a code editor to view or edit the code. My favorite, and recommended one is Visual Studio Code.
@@ -70,7 +70,7 @@ You will need a code editor to view or edit the code. My favorite, and recommend
 ### ⚙️ Setup and Use
 
   #### Cloning & Downloading
-  * _Go to the repository here [link](https://github.com/OLGON92/Animal-Shelter-API.Solution)_
+  * _Go to the repository using this [link](https://github.com/OLGON92/Animal-Shelter-API.Solution)_
   * _Click "Clone or download" to reveal the HTTPS url ending with .git and the 'Download ZIP' option_
   * _Open up your system Terminal or GitBash, navigate to your desktop with the command: `cd Desktop`, or whichever location suits you best_
   * _Clone the repository to your desktop using: `git clone https://github.com/OLGON92/Animal-Shelter-API.Solution.git`_
@@ -103,11 +103,11 @@ You will need a code editor to view or edit the code. My favorite, and recommend
   #### Database
   * _Navigate to 'Animal-Shelter-API.Solution' in your command line_
   * _From there navigate to 'AnimalShelterApi'_
-  * _Run the command "dotnet build"_
-   _Now you will need to create a migration; run the command "dotnet ef migrations add Initial"_
-  * _Anytime you make a change to any of the models, you will have to enter this command "dotnet ef migrations add [ChangeInMigration]" . Please note that the brackets don't need to be there, and words in brackets are an example._
-  * _After verifying that the changes are correct enter "dotnet ef database update". If you would like to remove a migration, enter "dotnet ef migrations remove"_
-  * _Then run the command "dotnet watch run"_
+  * _Run the command `dotnet build`_
+   _Now you will need to create a migration; run the command `dotnet ef migrations add Initial`_
+  * _Anytime you make a change to any of the models, you will have to enter this command `dotnet ef migrations add [ChangeInMigration]` . Please note that the brackets don't need to be there, and words in brackets are an example._
+  * _After verifying that the changes are correct enter `dotnet ef database update`. If you would like to remove a migration, enter `dotnet ef migrations remove`_
+  * _Then run the command `dotnet watch run`_
   * _It should then open the development environment in your preferred web browser automatically_
 
   #### Launch the API
@@ -134,6 +134,7 @@ Explore the API endpoints in Postman or a browser.
 * _By default it will show you 5 results per page_
 * _You can navigate to page two by modifying the page number in the URL_
 * _Here's an example 'https://localhost:5001/api/v2/Animals?pageNumber=1&pageSize=5'_
+* Please note that there are only two pages. Would recommend using the URL given previously
 * _To see the default enter the URL like this 'https://localhost:5001/api/v2/Animals'_
 
 ..........................................................................................
@@ -145,7 +146,7 @@ Base URL: `https://localhost:5000` or `https://localhost:5001`
 
 #### HTTP Request Structure
 This is the http request structure.
-* Please note that this request structure is for API's that use versioning. For an API that doesn't use versioning you would make it look more like this '/api/{component}'
+* Please note that this request structure is for API's that use versioning. For an API that doesn't use versioning you would make it look more like this for GET and POST'/api/{component}' or '/api/{component}/{id}' for GET, PUT, and DELETE.
 ```
 GET /api/{version}/{component}
 POST /api/{version}/{component}
@@ -173,7 +174,8 @@ https://localhost:5001/api/v2/Animals/2
 ..........................................................................................
 ### Animals
 Here I will show you how to utilize GET for all animals, POST, GET for a specific animal, PUT, and DELETE
-* Please note that when you 
+* Please note that when you send a GET request you should receive a status code of "200 ok" that let's you know the request was a success. When you send a POST request you will receive a "201" code to indicate a successful request. When you send a PUT and DELETE request you will receive a "204" code letting you know it worked.
+* Also anything with a 400 or 404 indicates that the request was bad; double-check that the request was written properly.
 #### HTTP Request
 ```
 GET /api/v1/animals
